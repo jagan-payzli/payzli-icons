@@ -10,23 +10,21 @@ fs.readdir(iconsDirectory, (err, files) => {
 		return;
 	}
 
-	// Generate CSS for each icon
-	const css = files
+	// Generate HTML code for each icon
+	const iconsHTML = files
 		.map((file) => {
 			const iconName = file.replace(/\.svg$/, "");
-			return `.icon-${iconName} {
-  background-image: url('${iconsDirectory}/${file}');
-  /* Add additional styling as needed */
-}`;
+			const svgContent = fs.readFileSync(`${iconsDirectory}/${file}`, "utf8");
+			return `<i class="icon icon-${iconName}">${svgContent}</i>`;
 		})
 		.join("\n\n");
 
-	// Write the generated CSS to a file
-	fs.writeFile("icons.css", css, (err) => {
+	// Write the generated HTML to a file
+	fs.writeFile("icons.html", iconsHTML, (err) => {
 		if (err) {
-			console.error("Error writing CSS file:", err);
+			console.error("Error writing HTML file:", err);
 			return;
 		}
-		console.log("CSS file generated successfully!");
+		console.log("HTML file generated successfully!");
 	});
 });

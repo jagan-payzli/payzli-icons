@@ -3,8 +3,41 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="icons.css" />
-		<title>Payzli Icons</title>
+		<title>SVG Icon CDN</title>
+		<script src="insert_icons.js"></script>
+
+		<style>
+			/* Define styles for the icons if needed */
+			.icon {
+				display: inline-block;
+				width: 24px; /* default width */
+				height: 24px; /* default height */
+				fill: currentColor; /* inherit color from parent */
+				vertical-align: middle; /* for alignment */
+			}
+
+			/* Additional classes for customization */
+			.icon-lg {
+				width: 48px;
+				height: 48px;
+			}
+			.icon-red {
+				color: red;
+			}
+			/* Add more customization classes as needed */
+		</style>
 	</head>
-	<body></body>
+	<body>
+		<!-- Define SVG symbols for each of your icons -->
+		<svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+			<!-- Replace "icon-name" with the actual filename of your SVG icon (without the .svg extension) -->
+			<symbol id="icon-name" viewBox="0 0 24 24">
+				<!-- Embed the SVG content of your icon here -->
+				<path
+					d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+				/>
+			</symbol>
+			<!-- Add symbols for more icons as needed -->
+		</svg>
+	</body>
 </html>
