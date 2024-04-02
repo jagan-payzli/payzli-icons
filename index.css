@@ -1,0 +1,133 @@
+.icon-svg {
+	width: 60px;
+	height: 60px;
+	object-fit: contain;
+}
+
+/* ----------- */
+html {
+	position: relative;
+}
+.App {
+	background: linear-gradient(to right, #2ecba9 0, #358fd0 100%);
+	min-height: 100vh;
+	display: flex;
+	font-size: calc(10px + 2vmin);
+	color: white;
+	padding: 20px;
+	flex-direction: column;
+	align-items: center;
+}
+.container {
+	max-width: 1200px;
+	width: 100%;
+}
+
+.App-link {
+	color: #61dafb;
+}
+.search-input {
+	width: 100%;
+	height: 40px;
+	border-radius: 20px;
+	outline: none;
+	border: none;
+	padding: 0 16px;
+	font-size: 17px;
+	color: lightslategrey;
+	box-shadow: 2px 1px 2px 0px #00000085;
+	position: relative;
+	z-index: 1001;
+}
+.search-cont {
+	position: sticky;
+	top: 10px;
+}
+.search-cont .search-icon {
+	position: absolute;
+	left: 13px;
+	color: lightslategrey;
+	font-size: 18px;
+	top: 13px;
+	z-index: 1001;
+}
+.icon-cont {
+	margin-top: 20px;
+	background: #00000017;
+	border-radius: 10px;
+	min-height: 70vh;
+}
+.icon-cont ul {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+}
+.icon-cont ul li {
+	padding: 10px;
+}
+.icon-cont ul li .icon-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: black;
+	background-color: white;
+	padding: 15px 10px;
+	border-radius: 4px;
+	width: 145px;
+	height: 100px;
+	cursor: pointer;
+}
+.icon-cont ul li .icon-item label {
+	font-size: 16px;
+	margin-top: 10px;
+}
+.setup_link {
+	display: flex;
+	justify-content: flex-end;
+}
+.setup_link a {
+	font-size: 16px;
+	margin: 4px 18px;
+	color: #fff;
+}
+.filename {
+	color: orange;
+	background-color: #00000017;
+	padding: 2px 5px;
+	border-radius: 4px;
+	font-size: 18px;
+	font-weight: bold;
+}
+.bold {
+	font-weight: bold;
+}
+code {
+	z-index: -1;
+}
+code pre {
+	overflow: auto;
+	background-color: #00000025;
+	padding: 0 20px;
+	border-radius: 6px;
+	font-size: small;
+	z-index: -1;
+}
+* {
+	scroll-behavior: smooth;
+}
+.scroller::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+.scroller::-webkit-scrollbar-thumb {
+	background-color: lightslategrey;
+	border-radius: 6px;
+}
+.scroller::-webkit-scrollbar-track {
+	background: #f1f1f1;
+	border-radius: 6px;
+}
+.scroller::-webkit-scrollbar-track-piece {
+	background: #ccc;
+	border-radius: 6px;
+}
